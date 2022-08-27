@@ -455,14 +455,14 @@ class PostFormatter:
                     (feed_title_html or '')
                     + ('\n' if feed_title_html and title_html else '')
                     + (title_html or '')
-                    + ('\n' if (feed_title_html or title_html) and tags_html else '')
-                    + (tags_html or '')
+                    + ('\n' if (feed_title_html or title_html) and author_html else '')
+                    + (author_html or '')
             )
 
             footer = (
                     (sourcing_html or '')
-                    + ('\n' if sourcing_html and author_html else '')
-                    + (author_html or '')
+                    + ('\n' if sourcing_html and tags_html else '')
+                    + (tags_html or '')
             )
 
             return header, footer
