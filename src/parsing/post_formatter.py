@@ -382,7 +382,7 @@ class PostFormatter:
         tags_html = Text(' '.join('\n' + tag for tag in tags)).get_html() if tags else None
         
         # ---- author ----
-        author_html = Text(f'\nAutor: {self.author}').get_html() if need_author and self.author else None
+        author_html = Text(f'\nAutor: {self.author} \n').get_html() if need_author and self.author else None
 
         if message_style == NORMAL_STYLE:
             # ---- title ----
