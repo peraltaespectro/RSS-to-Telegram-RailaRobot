@@ -416,9 +416,9 @@ class PostFormatter:
 
             footer = (
                     (via_html or '')
-                    + (' ' if via_html and tags_html else '')
+                    + ('\n' if via_html and tags_html else '')
                     + (author_html or '')
-                    + (tags_html or '')
+                    + ('\n' tags_html or '')
             )
 
             return header, footer
