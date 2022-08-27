@@ -239,10 +239,10 @@ class PostFormatter:
             media_msg_count = await self.media.estimate_message_counts() \
                 if (display_media != DISABLE and self.media) else 0
             normal_msg_post = self.generate_formatted_post(sub_title=sub_title,
-                                                           tags=tags,
                                                            title_type=title_type,
                                                            via_type=via_type,
                                                            need_author=need_author,
+                                                           tags=tags,
                                                            message_type=NORMAL_MESSAGE,
                                                            message_style=message_style)
             normal_msg_len = get_plain_text_length(normal_msg_post)
@@ -315,10 +315,10 @@ class PostFormatter:
             if option_hash in self.__post_bucket:  # double check
                 return self.__post_bucket[option_hash]
             post = self.generate_formatted_post(sub_title=sub_title,
-                                                tags=tags,
                                                 title_type=title_type,
                                                 via_type=via_type,
                                                 need_author=need_author,
+                                                tags=tags,
                                                 message_type=message_type,
                                                 message_style=message_style)
             self.__post_bucket[option_hash] = post, need_media, need_link_preview
@@ -477,10 +477,10 @@ class PostFormatter:
                                 message_type: TypeMessageType,
                                 message_style: TypeMessageStyle) -> str:
         header, footer = self.get_post_header_and_footer(sub_title=sub_title,
-                                                         tags=tags,
                                                          title_type=title_type,
                                                          via_type=via_type,
                                                          need_author=need_author,
+                                                         tags=tags,
                                                          message_type=message_type,
                                                          message_style=message_style)
         content = self.parsed_html if message_type == NORMAL_MESSAGE else ''
