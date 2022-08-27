@@ -338,7 +338,7 @@ class PostFormatter:
         #
         # {content}  (* only present when NORMAL_MESSAGE)
         #
-        # {via} {author}  (* determined by need_author)
+        # {via} {Autor}  (* determined by need_author)
         #
         # title:
         #   POST_TITLE_NO_LINK: <b><u>Title</u></b>
@@ -358,7 +358,7 @@ class PostFormatter:
         # {content}  (* only present when NORMAL_MESSAGE)
         #
         # {sourcing}
-        # {author}  (* determined by need_author)
+        # {Autor}  (* determined by need_author)
         #
         # feed_title:
         #   FEED_TITLE_VIA: <b>Feed Title</b>
