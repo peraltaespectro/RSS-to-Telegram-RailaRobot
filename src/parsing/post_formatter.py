@@ -338,7 +338,7 @@ class PostFormatter:
         #
         # {content}  (* only present when NORMAL_MESSAGE)
         #
-        # {via} {Autor}  (* determined by need_author)
+        # {via} {author}  (* determined by need_author)
         #
         # title:
         #   POST_TITLE_NO_LINK: <b><u>Title</u></b>
@@ -358,7 +358,7 @@ class PostFormatter:
         # {content}  (* only present when NORMAL_MESSAGE)
         #
         # {sourcing}
-        # {Autor}  (* determined by need_author)
+        # {author}  (* determined by need_author)
         #
         # feed_title:
         #   FEED_TITLE_VIA: <b>Feed Title</b>
@@ -382,7 +382,7 @@ class PostFormatter:
         tags_html = Text(' '.join('\n' + tag for tag in tags)).get_html() if tags else None
         
         # ---- author ----
-        author_html = Text(f'(author: {self.author})').get_html() if need_author and self.author else None
+        author_html = Text(f'(Autor: {self.author})').get_html() if need_author and self.author else None
 
         if message_style == NORMAL_STYLE:
             # ---- title ----
