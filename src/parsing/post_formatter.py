@@ -412,12 +412,12 @@ class PostFormatter:
             header = (
                     (title_html or '')
                     + ('\n' if title_html and author_html else '')
-                    + (author_html or '')
             )
 
             footer = (
                     (via_html or '')
                     + (' ' if via_html and tags_html else '')
+                    + (author_html or '')
                     + (tags_html or '')
             )
 
@@ -456,12 +456,12 @@ class PostFormatter:
                     + ('\n' if feed_title_html and title_html else '')
                     + (title_html or '')
                     + ('\n' if (feed_title_html or title_html) and author_html else '')
-                    + (author_html or '')
             )
 
             footer = (
                     (sourcing_html or '')
                     + ('\n' if sourcing_html and tags_html else '')
+                    + (author_html or '')
                     + (tags_html or '')
             )
 
