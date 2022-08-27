@@ -377,12 +377,12 @@ class PostFormatter:
 
         feed_title = sub_title or self.feed_title
         title = self.title or 'Untitled'
+        
+        # ---- author ----
+        author_html = Text(f'(author: {self.author})').get_html() if need_author and self.author else None
 
         # ---- hashtags ----
         tags_html = Text(' '.join('' + tag for tag in tags)).get_html() if tags else None
-
-        # ---- author ----
-        author_html = Text(f'(author: {self.author})').get_html() if need_author and self.author else None
 
         if message_style == NORMAL_STYLE:
             # ---- title ----
