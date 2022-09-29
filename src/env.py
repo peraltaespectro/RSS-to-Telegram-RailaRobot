@@ -298,7 +298,7 @@ if not NO_UVLOOP:
         import uvloop
 
         uvloop.install()
-        uvloop_enabled = True
+        uvloop_enabled = False
     except ImportError:  # not installed (e.g. Windows)
         uvloop = None
 loop = asyncio.new_event_loop()
