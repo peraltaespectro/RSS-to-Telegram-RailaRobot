@@ -292,13 +292,13 @@ bot_peer: Optional[User] = None  # placeholder
 bot_input_peer: Optional[InputPeerUser] = None  # placeholder
 
 # ----- loop initialization -----
-uvloop_enabled = False
+uvloop_enabled = True
 if not NO_UVLOOP:
     try:
         import uvloop
 
         uvloop.install()
-        uvloop_enabled = False
+        uvloop_enabled = True
     except ImportError:  # not installed (e.g. Windows)
         uvloop = None
 loop = asyncio.new_event_loop()
