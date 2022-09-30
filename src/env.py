@@ -292,7 +292,7 @@ bot_peer: Optional[User] = None  # placeholder
 bot_input_peer: Optional[InputPeerUser] = None  # placeholder
 
 # ----- loop initialization -----
-uvloop_enabled = True
+uvloop_enabled = False
 if not NO_UVLOOP:
     try:
         import uvloop
